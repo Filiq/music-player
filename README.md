@@ -1,2 +1,2 @@
-# music-player
+# Music Player
 React Music Player
