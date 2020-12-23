@@ -1,0 +1,165 @@
+.player {
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inputs {
+  width: 60%;
+  display: flex;
+}
+
+.time-control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  .song-input {
+    width: 100%;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  p {
+    padding: 1rem;
+  }
+}
+
+input[type="range"] {
+  -webkit-appeareance: none;
+  background: transparent;
+}
+
+.volume-control {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  .volume-input {
+    width: 150%;
+    padding: 0 0.15rem;
+    cursor: pointer;
+    background: #cccccc;
+    border-radius: 1rem;
+    &:focus {
+      outline: 0;
+    }
+    &::-moz-range-thumb {
+      height: 12px;
+      width: 12px;
+      border: 0;
+      background: #4e4e4e;
+    }
+    &::-moz-range-track {
+      cursor: pointer;
+      background: #cccccc;
+      border-radius: 1rem;
+      padding: 0 0.15rem;
+      height: 1rem;
+      width: 100%;
+    }
+  }
+  .volume-icon {
+    margin-left: 1rem;
+  }
+}
+
+.volume-input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+.volume-input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  background: #4e4e4e;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.volume-input[type="range"]::-webkit-slider-runnable-track {
+  cursor: pointer;
+  background: #cccccc;
+  border-radius: 1rem;
+  padding: 0 0.15rem;
+  height: 1rem;
+}
+
+.play-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 30%;
+  svg {
+    cursor: pointer;
+  }
+}
+
+.song-input:focus {
+  outline: 0;
+}
+
+.song-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+}
+
+.song-input::-moz-range-thumb {
+  height: 1rem;
+  width: 1rem;
+  border: 0;
+  background: transparent;
+}
+
+.track {
+  background: lightblue;
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.animate-track {
+  background: #cccccc;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(0%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .inputs {
+    width: 75%;
+  }
+  .play-control {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .inputs {
+    width: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .play-control {
+    width: 60%;
+  }
+  .volume-control {
+    margin-top: 0.25rem;
+    width: 25%;
+    justify-content: center;
+    .volume-input {
+      width: 125%;
+    }
+  }
+}
